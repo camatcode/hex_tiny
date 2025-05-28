@@ -1,0 +1,8 @@
+services:
+  hex_tiny:
+    image: camatcode/hex_tiny
+    container_name: hex_tiny
+    ports:
+      # {port you want hex tiny to run on}:8000
+      - 8000:8000
+    restart: unless-stopped
