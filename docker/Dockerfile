@@ -1,5 +1,5 @@
 FROM elixir:1.18-alpine
-ADD entrypoint.sh /
+ADD docker/entrypoint.sh /
 RUN apk update && apk add openssl
 RUN mkdir /acme
 RUN cd /acme && openssl genrsa -out private_key.pem

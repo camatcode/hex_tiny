@@ -8,13 +8,6 @@ jobs:
   ci:
     env:
       IMAGE_NAME: "hex_tiny"
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - pair:
-              elixir: '1.18.3-otp-27'
-              otp: '27.3.1'
 
     runs-on: ubuntu-24.04
 
