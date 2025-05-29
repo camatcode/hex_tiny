@@ -4,5 +4,3 @@ services:
     container_name: hex_beefy
     network_mode: host
     restart: unless-stopped
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
