@@ -38,7 +38,7 @@ docker compose  -f docker-compose_beefy.yml logs -f
 docker compose  -f docker-compose_beefy.yml down
 ```
 
-### Use a web-browser
+### Use a web-browser http://localhost:4000/
 
 ![image showing beefy hex](beefy_screen.png)
 
