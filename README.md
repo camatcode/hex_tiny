@@ -46,3 +46,5 @@ docker compose  -f docker-compose_beefy.yml down
 ### Motivations
 
 I needed this to use as a reference API implementation to execute against (because testing against Hex.pm itself is rude).
+
+My CI/CD in this case is really limited (can't compose or launch services), so everything had to work in one image.
