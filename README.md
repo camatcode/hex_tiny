@@ -5,10 +5,17 @@
 * **hex_tiny** is a single image containing "repository" functionality of private hex repos. It is as if you followed [Hex: Self Hosting](https://hex.pm/docs/self-hosting) and containerized it.
 * **hex_beefy** is a single image containing [hexpm/hexpm](https://github.com/hexpm/hexpm/tree/main) running in a **test** environment, with an internal postgres already set up.
 
+----
 
-## Docker 
+### hex_tiny 
 
-### hex_tiny docker compose
+#### docker
+
+```sh
+docker run -it  --network=host  camatcode/hex_tiny #you can use -p {port}:8000 instead to control the port
+```
+
+#### docker compose 
 
 ```sh
 # to start in daemon mode
@@ -23,8 +30,18 @@ docker compose  -f docker-compose_tiny.yml logs -f
 docker compose  -f docker-compose_tiny.yml down
 ```
 
-### hex_beefy docker compose
+----
 
+### hex_beefy
+
+#### docker
+
+```sh
+docker run -it  --network=host  camatcode/hex_beefy #you can use -p {port}:4000 instead to control the port
+```
+
+
+#### docker compose
 ```sh
 # to start in daemon mode
 docker compose  -f docker-compose_beefy.yml up -d
