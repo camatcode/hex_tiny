@@ -32,7 +32,7 @@ docker compose  -f docker-compose_tiny.yml logs -f
 docker compose  -f docker-compose_tiny.yml down
 ```
 
-### Use a web-browser http://localhost:4000/
+### Use a web-browser http://localhost:8000/
 
 ![image showing beefy hex](tiny_screen.png)
 
@@ -65,6 +65,10 @@ docker compose  -f docker-compose_beefy.yml down
 ### Use a web-browser http://localhost:4000/
 
 ![image showing beefy hex](beefy_screen.png)
+
+#### Tips
+
+* Test emails are sent here: http://localhost:4000/sent_emails
 
 --------
 ### Motivations
