@@ -1,0 +1,46 @@
+FROM postgres:17-alpine3.21 as build
+
+
+FROM elixir:1.18-alpine  as e_build
+
+COPY --from=build / /
+
+
+RUN apk add openssl-dev --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
+RUN apk add git
+
+WORKDIR /code
+
+RUN git clone https://github.com/hexpm/hexpm.git --single-branch
+
+WORKDIR /code/hexpm
+
+RUN apk add make --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
+RUN apk add g++ --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
+RUN apk add yarn inotify-tools
+RUN mix deps.get && mix compile
+RUN chmod 777 -R /tmp
+RUN chown -R postgres: /code
+USER postgres
+ENV POSTGRES_USER="postgres"
+ENV POSTGRES_PASSWORD="postgres"
+ENV PGDATA="/var/lib/postgresql/data/pgdata"
+RUN initdb
+RUN postgres &   mix setup
+
+
+FROM elixir:1.18-alpine as e_2_build
+USER postgres
+ENV POSTGRES_USER="postgres"
+ENV POSTGRES_PASSWORD="postgres"
+ENV PGDATA="/var/lib/postgresql/data/pgdata"
+
+COPY --from=e_build / /
+WORKDIR /code/hexpm
+RUN touch log
+COPY docker/beefy_entrypoint.sh /code/hexpm/
+
+EXPOSE 4000
+ENTRYPOINT ["/code/hexpm/beefy_entrypoint.sh"]
+
+

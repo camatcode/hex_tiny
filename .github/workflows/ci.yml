@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  ci:
+  ci_1:
     env:
       IMAGE_NAME: "hex_tiny"
 
@@ -16,4 +16,16 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:latest -f docker/Dockerfile .
+
+  ci_2:
+    env:
+      IMAGE_NAME: "hex_beefy"
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t $IMAGE_NAME:latest -f docker/Dockerfile_beefy .
 
