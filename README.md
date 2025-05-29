@@ -66,6 +66,10 @@ docker compose  -f docker-compose_beefy.yml down
 
 ![image showing beefy hex](beefy_screen.png)
 
+#### Tips
+
+* Test emails are sent here: http://localhost:4000/sent_emails
+
 --------
 ### Motivations
 
