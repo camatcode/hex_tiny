@@ -3,7 +3,9 @@
 
 
 * **hex_tiny** is a single image containing "repository" functionality of private hex repos. It is as if you followed [Hex: Self Hosting](https://hex.pm/docs/self-hosting) and containerized it.
+  * published on docker hub as [camatcode/hex_tiny](https://hub.docker.com/r/camatcode/hex_tiny)
 * **hex_beefy** is a single image containing [hexpm/hexpm](https://github.com/hexpm/hexpm/tree/main) running in a **test** environment, with an internal postgres already set up.
+  * published on docker hub as [camatcode/hex_beefy](https://hub.docker.com/r/camatcode/hex_beefy)
 
 ----
 
