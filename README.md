@@ -4,9 +4,9 @@
 * **hex_tiny** is a single image containing "repository" functionality of private hex repos. It is as if you followed [Hex: Self Hosting](https://hex.pm/docs/self-hosting) and containerized it.
 * **hex_beefy** is a single image containing [hexpm/hexpm](https://github.com/hexpm/hexpm/tree/main) running in a **test** environment, with an internal postgres already set up.
 
-## Docker Compose
+## Docker 
 
-### hex_tiny compose
+### hex_tiny docker compose
 
 ```sh
 # to start in daemon mode
@@ -19,9 +19,9 @@ docker compose  -f docker-compose_tiny.yml logs -f
 
 # To down
 docker compose  -f docker-compose_tiny.yml down
+```
 
-
-### hex_beefy compose
+### hex_beefy docker compose
 
 ```sh
 # to start in daemon mode
