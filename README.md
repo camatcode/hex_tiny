@@ -13,7 +13,7 @@ Two containerized Hex package repository/api images for testing and development.
 
 ## Overview
 
-**hex_tiny** - A lightweight single-image Hex repository server based on the [Hex: Self Hosting](https://hex.pm/docs/self-hosting) guide. Perfect for private repositories.
+**hex_tiny** - A lightweight single-image Hex repository server based on the [Hex: Self Hosting](https://hex.pm/docs/self-hosting) guide. Provides "repository" functionality.
 - Docker Hub: [camatcode/hex_tiny](https://hub.docker.com/r/camatcode/hex_tiny)
 - Port: 8000
 
