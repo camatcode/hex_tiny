@@ -47,6 +47,8 @@ Access at: http://localhost:8000/
 
 ![hex_tiny interface](tiny_screen.png)
 
+--------
+
 ### hex_beefy
 
 **Direct Docker:**
