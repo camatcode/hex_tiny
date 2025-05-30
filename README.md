@@ -73,6 +73,10 @@ Access at: http://localhost:4000/
 
 **Test emails:** http://localhost:4000/sent_emails
 
+**Pitfalls:**
+
+* If you publish documentation to a package, it will say you published it, but will not store the docs (so you can't retrieve what you posted)
+
 ## CI/CD Integration
 
 Example usage in GitHub Actions: [aura's workflow](https://github.com/camatcode/aura/blob/main/.github/workflows/ci.yml#L27)
