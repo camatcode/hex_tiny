@@ -75,6 +75,8 @@ Access at: http://localhost:4000/
 
 **Test emails:** http://localhost:4000/sent_emails
 
+**Test user:** With docker tag **:with_test_user** - username: "test_user" password: "elixir1234" admin for org called "test_org"
+
 **Pitfalls:**
 
 * If you publish documentation to a package, it will say you published it, but will not store the docs (so you can't retrieve what you posted)
